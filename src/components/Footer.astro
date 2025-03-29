@@ -1,0 +1,49 @@
+---
+import { sections } from "../dataSources/sections";
+---
+
+<footer class="w-full h-auto flex flex-col gap-10 items-center bg-red-100/20 px-20 py-10 ">
+  <div class="w-full h-auto flex flex-row justify-around">
+    <div>
+      <h3 class="text-xl font-bold text-red-700">Categorias</h3>
+      <div class="flex flex-col gap-5">
+        {
+          sections.map((section) => (
+            <a class="font-serif" href="">{section.name}</a>
+          ))
+        }
+      </div>
+    </div>
+    <div class="px-10 border-l-[1px] border-l-red-700">
+      <h3 class="text-xl font-bold text-red-700">Productos</h3>
+      <div class="flex flex-col gap-5">
+        {
+          sections.map((section) => (
+            <a class="font-serif" href="">{section.name}</a>
+          ))
+        }
+      </div>
+    </div>
+    <div class="px-10 border-l-[1px] border-l-red-700">
+      <h3 class="text-xl font-bold text-red-700">Contactanos</h3>
+      <div class="flex flex-col gap-5">
+        {
+          sections.map((section) => (
+            <a class="font-serif" href="">{section.name}</a>
+          ))
+        }
+      </div>
+    </div>
+    <div class="px-10 border-l-[1px] border-l-red-700">
+      <h3 class="text-xl font-bold text-red-700">Donde Estamos</h3>
+      <div class="flex flex-col gap-5">
+        {
+          sections.map((section) => (
+            <a class="font-serif" href="">{section.name}</a>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+  <p>Copy @asa</p>
+</footer>

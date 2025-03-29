@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+
+html {
+  font-family: "Monomakh", system-ui;
+}
+
+@utility mask-fade-bottom {
+  mask-image: linear-gradient(to top, black 10%, transparent 80%);
+}
+
+@utility mask-fade-top {
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+}
+
+.hero-back {
+  background-image: radial-gradient(circle at 16% 47%, hsla(197,0%,52%,0.05) 0%, hsla(197,0%,52%,0.05) 11%,transparent 11%, transparent 56%,transparent 56%, transparent 100%),radial-gradient(circle at 86% 9%, hsla(197,0%,52%,0.05) 0%, hsla(197,0%,52%,0.05) 27%,transparent 27%, transparent 68%,transparent 68%, transparent 100%),radial-gradient(circle at 26% 50%, hsla(197,0%,52%,0.05) 0%, hsla(197,0%,52%,0.05) 32%,transparent 32%, transparent 82%,transparent 82%, transparent 100%),radial-gradient(circle at 55% 18%, hsla(197,0%,52%,0.05) 0%, hsla(197,0%,52%,0.05) 44%,transparent 44%, transparent 49%,transparent 49%, transparent 100%),radial-gradient(circle at 42% 50%, hsla(197,0%,52%,0.05) 0%, hsla(197,0%,52%,0.05) 38%,transparent 38%, transparent 55%,transparent 55%, transparent 100%),linear-gradient(90deg, hsl(206,0%,96%),hsl(206,0%,96%));
+}
+
+.text-outline {
+  color: black;
+  text-shadow: 
+    -0.4px -0.4px 0 red,  
+     0.4px -0.4px 0 red,
+    -0.4px  0.4px 0 red,
+     0.4px  0.4px 0 red;
+}
+
+

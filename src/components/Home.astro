@@ -1,61 +1,13 @@
-<div id="container">
-	<main class="flex flex-col justify-end items-center h-[650px] w-screen back pb-28 bg-black/95">
-		<div class="flex flex-col justify-center items-center gap-20">
-			<h3 class="text-white">Text test</h3>
-			<div class="flex flex-row gap-20">
-				<div class="w-44 h-44 rounded-full animate-move" style="--start-x: 400px; --delay: 0s;"></div>
-				<div class="w-44 h-44 rounded-full animate-move" style="--start-x: 200px; --delay: 0.2s;"></div>
-				<div class="w-44 h-44 rounded-full bg-white"></div>
-				<div class="w-44 h-44 rounded-full animate-move" style="--start-x: -200px; --delay: 0.2s;"></div>
-				<div class="w-44 h-44 rounded-full animate-move" style="--start-x: -400px; --delay: 0s;"></div>
-			</div>
-		</div>
-	</main>
-</div>
+---
+import Favorites from "./favorites.astro";
+import Hero from "./Hero.astro";
+import SectionProducts from "./SectionProducts.astro";
+---
 
-<style>
-	/* Fondo con gradiente */
-	.back {
-		background: #0f0c29;  /* fallback for old browsers */
-		background: -webkit-linear-gradient(to right, #290c0c, #993b3b, #290c0c);  /* Chrome 10-25, Safari 5.1-6 */
-		background: linear-gradient(to right, #290c0c, #993b3b, #290c0c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	}
+<main class="flex flex-col justify-end items-center h-auto pb-28">
+	<Hero />
+	<SectionProducts />
+	<Favorites />
+</main>
 
-/* .back {
-  background: linear-gradient(270deg, #290c0c, #993b3b, #290c0c);
-  background-size: 400% 400%;
-  animation: moveGradient 9s ease infinite;
-}
-
-@keyframes moveGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-} */
-
-	/* Animación reutilizable */
-	@keyframes moveIn {
-		from {
-			transform: translateX(var(--start-x));
-			opacity: 0;
-		} 
-		to {
-			transform: translateX(0);
-			opacity: 1;
-		}
-	}
-
-	/* Clases de animación aplicadas a todas las burbujas */
-	.animate-move {
-		background: #f9f9f9;
-		animation: moveIn 2s ease-in-out var(--delay) forwards;
-	}
-
-</style>
 
