@@ -8,6 +8,18 @@ import "../../styles/swiper-hero.css";
 
 import { EffectCards, Autoplay, } from "swiper/modules";
 
+const images = [
+  "/images/bioseguridad.webp",
+  "/images/plastico-invernadero.webp",
+  "/images/local.webp",
+  "/images/bolsas.webp",
+  "/images/bioseguridad.webp",
+  "/images/plastico-invernadero.webp",
+  "/images/local.webp",
+  "/images/bolsas.webp",
+  "/images/bolsas.webp",
+];
+
 export default function BannerHero() {
   return (
     <>
@@ -26,15 +38,11 @@ export default function BannerHero() {
           perSlideRotate: 15, // Controla la rotación de la tarjeta
         }}
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+      {images.map((src, index) => (
+        <SwiperSlide key={index}>
+          <img src={src} alt={`Slide ${index + 1}`} className="w-full h-full object-cover" />
+        </SwiperSlide>
+      ))}
       </Swiper>
     </>
   )

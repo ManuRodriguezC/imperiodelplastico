@@ -1,15 +1,23 @@
 ---
+import { lineas } from "../dataSources/lineas";
+import { products } from "../dataSources/productos";
 import { sections } from "../dataSources/sections";
+import { Capitalize } from "../utils/capitalize";
+import Facebook from "../components/icons/Facebook.astro"
+import X from "../components/icons/X.astro"
+import WhatsApp from "./icons/WhatsApp.astro";
+
+const messageWhatsApp = "Gracias%20por%20comunicarte%20con%20Imperio%20del%20Plástico.%20¿Cómo%20podemos%20ayudarte?"
 ---
 
 <footer class="w-full h-auto flex flex-col gap-10 items-center bg-red-100/20 px-20 py-10 ">
   <div class="w-full h-auto flex flex-row justify-around">
     <div>
-      <h3 class="text-xl font-bold text-red-700">Categorias</h3>
-      <div class="flex flex-col gap-5">
+      <h3 class="text-xl font-bold text-red-700">Lineas</h3>
+      <div class="flex flex-col gap-3">
         {
-          sections.map((section) => (
-            <a class="font-serif" href="">{section.name}</a>
+          lineas.map((line) => (
+            <a class="font-serif hover:underline" href={`/linea/${line}`}>{Capitalize(line)}</a>
           ))
         }
       </div>
@@ -18,8 +26,8 @@ import { sections } from "../dataSources/sections";
       <h3 class="text-xl font-bold text-red-700">Productos</h3>
       <div class="flex flex-col gap-5">
         {
-          sections.map((section) => (
-            <a class="font-serif" href="">{section.name}</a>
+          products.slice(0, 5).map((prod) => (
+            <a class="font-serif" href={`/producto/${prod.slug}`}>{prod.nombre}</a>
           ))
         }
       </div>
@@ -27,22 +35,44 @@ import { sections } from "../dataSources/sections";
     <div class="px-10 border-l-[1px] border-l-red-700">
       <h3 class="text-xl font-bold text-red-700">Contactanos</h3>
       <div class="flex flex-col gap-5">
-        {
-          sections.map((section) => (
-            <a class="font-serif" href="">{section.name}</a>
-          ))
-        }
+        <a class="flex flex-row gap-2"
+          class="text-colorBlue cursor-pointer underline flex flex-row ml-5"
+          href=`https://api.whatsapp.com/send?phone=573203510858&text=${messageWhatsApp}`
+          target="_blank"
+          rel="noopener noreferrer">
+          <WhatsApp /> 
+          <p class="font-serif">
+            +57 3203510858
+          </p>
+        </a>
+        <a class="flex flex-row gap-2"
+          class="text-colorBlue cursor-pointer underline flex flex-row ml-5"
+          href=`https://api.whatsapp.com/send?phone=573132871471&text=${messageWhatsApp}`
+          target="_blank"
+          rel="noopener noreferrer">
+          <WhatsApp /> 
+          <p class="font-serif">
+            +57 3132871471
+          </p>
+        </a>
+        <p>
+          imperioplasticoss@gmail.com
+        </p>
+        <div class="flex gap-5">
+          <Facebook />
+          <X />
+        </div>
       </div>
     </div>
     <div class="px-10 border-l-[1px] border-l-red-700">
       <h3 class="text-xl font-bold text-red-700">Donde Estamos</h3>
-      <div class="flex flex-col gap-5">
-        {
-          sections.map((section) => (
-            <a class="font-serif" href="">{section.name}</a>
-          ))
-        }
-      </div>
+      <iframe 
+        class="w-[300px] h-[200px] shadow-md rounded-2xl"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248.55196437324668!2d-74.11936527840138!3d4.624145921464077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9910db31d9b1%3A0xb3c0ce660dfe336f!2sEl%20imperio%20del%20plastico!5e0!3m2!1ses-419!2sco!4v1743353623076!5m2!1ses-419!2sco"
+        allowfullscreen 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
   </div>
   <p>Copy @asa</p>

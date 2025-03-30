@@ -1,25 +1,21 @@
 ---
+import ProductoRender from '../components/ProductoRender.astro';
 import { products } from '../dataSources/productos';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-  <main class="flex flex-col justify-end items-center h-auto pb-28 pt-40 px-40">
-    <h1 class="text-2xl my-10">Imperio del plastico te da soluciones para cubrir tu necesidad en Bogotá y toda Colombia</h1>
-    <p class="text-center py-10">
+  <main class="flex flex-col justify-end items-center h-auto pb-28 pt-40 px-40 back-products">
+    <h1 class="text-3xl text-center my-10">Damos soluciones para cubrir tu necesidad en Bogotá y toda Colombia</h1>
+    <p class="text-center py-10 text-gray-500">
       Descubre nuestra amplia gama de productos plásticos diseñados para diferentes industrias. 
       Desde embalajes hasta soluciones agrícolas, ofrecemos materiales de alta calidad que se adaptan a tus necesidades. 
       ¡Explora nuestro catálogo y encuentra la mejor opción para ti!
     </p>
-    <div class="flex flex-wrap justify-center items-center gap-10">
+    <div class="w-full flex flex-col gap-40 mt-20">
       {
-        products.map((prod) => (
-          <div
-            class="w-72 h-auto flex flex-col justify-center items-center cursor-pointer
-            border-2 border-gray-300 shadow-xl rounded-xl hover:scale-105 transition-all duration-300">
-              <img class="w-auto h-[200px]" src={prod.imagen} alt={prod.nombre}/>
-              <p>{prod.nombre}</p>
-          </div>
+        products.map((prod, index) => (
+          <ProductoRender {...prod} index={index} />
         ))
       }
     </div>

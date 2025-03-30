@@ -1,0 +1,21 @@
+---
+import ProductoOnly from "../../components/ProductoOnly.astro";
+import { products } from "../../dataSources/productos";
+import Layout from "../../layouts/Layout.astro";
+
+export const prerender = true;
+
+export function getStaticPaths() {
+  return products.map((prod) => ({
+    params: { producto: prod.slug}
+  }));
+}
+
+const { producto } = Astro.params
+let findProduct = products.find(prod => prod.slug.toString() === producto.toString());
+---
+<Layout>
+  <main class="flex flex-col justify-end items-center h-auto pb-28 pt-40 px-40">
+    <ProductoOnly {...findProduct}/>
+  </main>
+</Layout>

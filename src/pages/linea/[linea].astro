@@ -1,0 +1,31 @@
+---
+import ProductoRender from "../../components/ProductoRender.astro";
+import { lineas } from "../../dataSources/lineas";
+import { products } from "../../dataSources/productos";
+import Layout from "../../layouts/Layout.astro";
+
+export const prerender = true;
+
+export function getStaticPaths() {
+  return lineas.map((lin) => ({
+    params: { linea: lin}
+  }));
+}
+
+const { linea } = Astro.params
+const filterProducts = products.filter(prod => prod.linea.includes(linea.toString()));
+---
+<Layout>
+    <main class="flex flex-col justify-end items-center h-auto pb-28 pt-40 px-40">
+      <h1 class="text-2xl my-10">
+        En <strong class="text-red-700">imperio del plastico</strong>, puedes encontrar todo sobre <strong class="text-red-700">{linea.toUpperCase()}</strong>
+      </h1>
+      <div class="w-full flex flex-col gap-40 mt-20">
+      {
+        filterProducts.map((prod, index) => (
+          <ProductoRender {...prod} index={index} />
+        ))
+      }
+    </div>
+  </main>
+</Layout>

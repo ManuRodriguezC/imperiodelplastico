@@ -42,8 +42,8 @@ export default function App() {
         className="w-full max-w-[1000px] min-w-[1000px] mx-auto"
       >
         {
-          favoriteProducts.map((prod) => (
-            <SwiperSlide>
+          favoriteProducts.map((prod, index) => (
+            <SwiperSlide key={`${prod.name}-${index}`}>
               
             </SwiperSlide>
           ))
