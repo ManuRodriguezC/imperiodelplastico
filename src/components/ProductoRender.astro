@@ -4,19 +4,21 @@ const { nombre, descripcion, imagen, slug, medidas, index } = Astro.props;
 const flexDirection = index !== undefined ? (Number(index) % 2 === 0 ? "flex-row" : "flex-row-reverse") : "";
 const borderColor = index !== undefined ? (Number(index) % 2 === 0 ? "border-product-1 bg-gray-400" : "border-product-2 bg-red-700") : "";
 ---
-<div class={`w-full flex ${flexDirection} justify-around items-center`}>
-  <div class={`w-[400px] h-[400px] flex justify-center items-center shadow-2xl ${borderColor}`}>
+<div class={`w-full flex flex-col lg:${flexDirection} justify-around items-center gap-5`}>
+  <div
+    class={`w-[250px] h-[250px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px]
+      flex justify-center items-center shadow-2xl ${borderColor}`}>
     <a href={`/producto/${slug}`}>
       <img src={imagen} alt={nombre} class="w-[350px] h-auto">
     </a>
   </div>
   <div class="flex flex-col items-center justify-center">
-    <h2 class="text-black text-5xl">
+    <h2 class="text-black text-5xl text-center">
       <a href={`/producto/${slug}`}>
         {nombre}
       </a>
     </h2>
-    <p class="text-gray-500 font-serif py-4">{descripcion}</p>
-    <p class="text-red-700 font-serif">Medidas: {medidas}</p>
+    <p class="text-gray-500 font-serif py-4 text-center">{descripcion}</p>
+    <p class="text-red-700 font-serif text-center">Medidas: {medidas}</p>
   </div>
 </div>

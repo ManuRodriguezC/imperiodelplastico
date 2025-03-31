@@ -6,9 +6,9 @@ const messageWhatsApp = "Gracias%20por%20comunicarte%20con%20Imperio%20del%20Pl√
 ---
 
 <Layout>
-  <main class="flex flex-col justify-end items-center h-auto pb-28 pt-40 px-40 ">
+  <main class="flex flex-col justify-end items-center h-auto pb-28 pt-20 lg:pt-32 xl:pt-40 px-6 md:px-20 lg:px-32 xl:px-40">
     <h1 class="text-xl text-center my-10">Tenemos un gran equipo en el cual apoyarte y asesorarte</h1>
-    <div class="flex flex-row gap-20">
+    <div class="flex flex-col md:flex-row gap-5 md:gap-10 xl:gap-20">
       <div
         class="flex flex-col justify-center items-center hover:scale-105 transition-all duration-200 hover:bg-gray-600
         p-12 rounded-2xl bg-gray-800 shadow-xl text-white  font-serif border-2 border-red-700">
@@ -45,10 +45,14 @@ const messageWhatsApp = "Gracias%20por%20comunicarte%20con%20Imperio%20del%20Pl√
       </div>
     </div>
     <!-- <p class="py-20">En caso de que quieras visitarnos puedes encontrarnos en nuestro local</p> -->
-    <div class="flex flex-row mt-20">
-      <img src="/images/local.webp" alt="Nuestra local en imperios del plastico" class="h-[500px] w-auto">
+    <div class="flex flex-col xl:flex-row mt-20">
+      <img
+        src="/images/local.webp"
+        alt="Nuestra local en imperios del plastico"
+        class="xl:h-[500px] h-auto w-full xl:w-auto"
+      />
       <iframe 
-        class="w-[200px] h-[500px] shadow-md"
+        class="w-full xl:w-[200px] h-auto xl:h-[500px] shadow-md"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248.55196437324668!2d-74.11936527840138!3d4.624145921464077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9910db31d9b1%3A0xb3c0ce660dfe336f!2sEl%20imperio%20del%20plastico!5e0!3m2!1ses-419!2sco!4v1743353623076!5m2!1ses-419!2sco"
         allowfullscreen 
         loading="lazy" 
