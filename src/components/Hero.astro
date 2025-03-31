@@ -2,22 +2,22 @@
 import BannerHero from "./tsx/BannerHero";
 ---
 
-<section class="w-full h-screen hero-back px-32 flex flex-row gap-10 justify-center items-center overflow-x-hidden">
-  <div class="w-1/2 h-full flex flex-col justify-center items-center gap-14">
+<section class="w-full h-auto min-h-screen hero-back py-36 lg:py-20 lg:px-24 xl:px-32 flex flex-col lg:flex-row gap-10 justify-center items-center">
+  <div class="w-full lg:w-1/2 h-full lg:px-5 flex flex-col justify-center items-center gap-14">
     <h1
-      class="text-red-700 text-xl font-bold">
+      class="text-red-700 text-xl font-bold text-center lg:text-left">
       Innovación y calidad en soluciones plásticas para cada necesidad
     </h1>
-    <h1 class="text-3xl font-extralight">
+    <h1 class="text-xl md:text-2xl lg:text-3xl font-extralight text-center lg:text-left">
       Ofrecemos productos y servicios de 
       <strong class="text-red-700">calidad</strong>
        con asesoría especializada para cada necesidad, 
        <strong class="text-red-700">garantizando soluciones</strong>
         duraderas y eficientes 
     </h1>
-    <p>Contamos con una amplia variedad de plásticos para invernaderos, seguridad, bioseguridad, protección, empaques, cintas y más</p>
+    <p class="text-center">Contamos con una amplia variedad de plásticos para invernaderos, seguridad, bioseguridad, protección, empaques, cintas y más</p>
   </div>
-  <div class="w-1/2 flex flex-wrap bg-custom-radial">
+  <div class="w-full h-auto lg:w-1/2 flex flex-wrap bg-custom-radial">
     <BannerHero client:load/>
   </div>
 </section>

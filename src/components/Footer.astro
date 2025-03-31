@@ -10,9 +10,9 @@ import WhatsApp from "./icons/WhatsApp.astro";
 const messageWhatsApp = "Gracias%20por%20comunicarte%20con%20Imperio%20del%20PlÃ¡stico.%20Â¿CÃ³mo%20podemos%20ayudarte?"
 ---
 
-<footer class="w-full h-auto flex flex-col gap-10 items-center bg-red-100/20 px-20 py-10 ">
-  <div class="w-full h-auto flex flex-row justify-around">
-    <div>
+<footer class="w-full h-auto flex flex-col gap-10 items-center bg-red-100/20 px-5 md:px-10 xl:px-20 py-10 ">
+  <div class="w-full h-auto grid grid-cols-2 xl:grid-cols-4 xl:flex-row justify-around">
+    <div class="mb-10 xl:mb-2 text-center md:text-left">
       <h3 class="text-xl font-bold text-red-700">Lineas</h3>
       <div class="flex flex-col gap-3">
         {
@@ -22,7 +22,7 @@ const messageWhatsApp = "Gracias%20por%20comunicarte%20con%20Imperio%20del%20PlÃ
         }
       </div>
     </div>
-    <div class="px-10 border-l-[1px] border-l-red-700">
+    <div class="px-10 border-l-[1px] border-l-red-700 text-center md:text-left">
       <h3 class="text-xl font-bold text-red-700">Productos</h3>
       <div class="flex flex-col gap-5">
         {
@@ -32,7 +32,7 @@ const messageWhatsApp = "Gracias%20por%20comunicarte%20con%20Imperio%20del%20PlÃ
         }
       </div>
     </div>
-    <div class="px-10 border-l-[1px] border-l-red-700">
+    <div class="hidden md:block xl:px-10 xl:border-l-[1px] xl:border-l-red-700">
       <h3 class="text-xl font-bold text-red-700">Contactanos</h3>
       <div class="flex flex-col gap-5">
         <a class="flex flex-row gap-2"
@@ -64,7 +64,7 @@ const messageWhatsApp = "Gracias%20por%20comunicarte%20con%20Imperio%20del%20PlÃ
         </div>
       </div>
     </div>
-    <div class="px-10 border-l-[1px] border-l-red-700">
+    <div class="hidden md:block px-10 border-l-[1px] border-l-red-700">
       <h3 class="text-xl font-bold text-red-700">Donde Estamos</h3>
       <iframe 
         class="w-[300px] h-[200px] shadow-md rounded-2xl"
@@ -75,5 +75,47 @@ const messageWhatsApp = "Gracias%20por%20comunicarte%20con%20Imperio%20del%20PlÃ
       </iframe>
     </div>
   </div>
-  <p>Copy @asa</p>
+  <div class="w-full flex justify-between items-center md:hidden flex-col">
+    <h3 class="text-xl font-bold text-red-700 text-center">Contactanos</h3>
+    <div class="flex flex-row gap-5">
+      <a class="flex flex-row gap-2"
+        class="text-colorBlue cursor-pointer underline flex flex-row ml-5"
+        href=`https://api.whatsapp.com/send?phone=573203510858&text=${messageWhatsApp}`
+        target="_blank"
+        rel="noopener noreferrer">
+        <WhatsApp /> 
+        <p class="font-serif">
+          +57 3203510858
+        </p>
+      </a>
+      <a class="flex flex-row gap-2"
+        class="text-colorBlue cursor-pointer underline flex flex-row ml-5"
+        href=`https://api.whatsapp.com/send?phone=573132871471&text=${messageWhatsApp}`
+        target="_blank"
+        rel="noopener noreferrer">
+        <WhatsApp /> 
+        <p class="font-serif">
+          +57 3132871471
+        </p>
+      </a>
+    </div>
+    <div class="flex gap-5">
+      <p>
+        imperioplasticoss@gmail.com
+      </p>
+      <Facebook />
+      <X />
+      </div>
+  </div>
+  <div class="w-full flex flex-col md:hidden">
+    <h3 class="text-center text-xl font-bold text-red-700">Donde Estamos</h3>
+    <iframe 
+      class="w-full h-[200px] shadow-md rounded-2xl"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248.55196437324668!2d-74.11936527840138!3d4.624145921464077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9910db31d9b1%3A0xb3c0ce660dfe336f!2sEl%20imperio%20del%20plastico!5e0!3m2!1ses-419!2sco!4v1743353623076!5m2!1ses-419!2sco"
+      allowfullscreen 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+  <!-- <p>Copy @asa</p> -->
 </footer>

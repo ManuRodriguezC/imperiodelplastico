@@ -25,10 +25,6 @@ export default function App() {
         }}
         speed={5000} // Controla la velocidad de desplazamiento (3 segundos por slide)
         breakpoints={{
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
           768: {
             slidesPerView: 2,
             spaceBetween: 20,
@@ -39,12 +35,17 @@ export default function App() {
           },
         }}
         modules={[Pagination, Autoplay]}
-        className="w-full max-w-[1000px] min-w-[1000px] mx-auto"
+        className="xl:w-full w-[300px] xl:max-w-[1000px] xl:min-w-[1000px] mx-auto"
       >
         {
           favoriteProducts.map((prod, index) => (
             <SwiperSlide key={`${prod.name}-${index}`}>
-              
+              <a className='w-full h-full' href={`/producto/${prod.slog}`}>
+                <img
+                  src={prod.image}
+                  alt={`Slide ${index + 1}`}
+                  className="w-full h-full object-cover absolute top-0 brightness-50"/>
+              </a>
             </SwiperSlide>
           ))
         }

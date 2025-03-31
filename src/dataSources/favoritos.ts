@@ -1,17 +1,17 @@
 export const favoriteProducts = [
   {
-    'name': 'Plástico Invernadero Negro',
+    'name': 'Plástico Invernadero',
     'category': 'plasticos',
     'description': 'Esta es la descripcion del producto',
     'image': '/images/products/plasticos-invernaderos.webp',
-    'slog': 'plastico-invernadero-negro'
+    'slog': 'plasticos-invernaderos'
   },
   {
     'name': 'Bolsas Ziploc',
     'category': 'bolsas',
     'description': 'Esta es la descripcion del producto',
     'image': '/images/products/ziploc.webp',
-    'slog': 'bolsas-ziploc'
+    'slog': 'ziploc'
   },
   {
     'name': 'Strect Film',
@@ -28,10 +28,10 @@ export const favoriteProducts = [
     'slog': 'polisombra'
   },
   {
-    'name': 'Plástico de COlores',
+    'name': 'Plástico de Colores',
     'category': 'plasticos',
     'description': 'Esta es la descripcion del producto',
     'image': '/images/products/plastico_de_colores.webp',
-    'slog': 'plastico-de-colores'
+    'slog': 'vinilos-adhesivos'
   },
 ]
