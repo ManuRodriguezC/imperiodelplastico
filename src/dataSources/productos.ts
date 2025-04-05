@@ -5,6 +5,8 @@ export const products = [
     imagen: "/images/products/bolsa_basura.webp",
     slug: "bolsa-basura",
     medidas: "90x120 cm",
+    price: "$ 25.000",
+    favorite: true,
     linea: ["bolsas"]
   },
   {
@@ -13,6 +15,8 @@ export const products = [
     imagen: "/images/products/bolsa_hermetica.webp",
     slug: "bolsa-hermetica",
     medidas: "20x30 cm",
+    price: "$ 25.000",
+    favorite: false,
     linea: ["bolsas"]
   },
   {
@@ -21,6 +25,8 @@ export const products = [
     imagen: "/images/products/bolsa_aluminio.webp",
     slug: "bolsa-aluminio",
     medidas: "15x25 cm",
+    price: "$ 25.000",
+    favorite: true,
     linea: ["bolsas"]
   },
   {
@@ -29,6 +35,8 @@ export const products = [
     imagen: "/images/products/bolsas_papel.webp",
     slug: "bolsas-papel",
     medidas: "25x35 cm",
+    price: "$ 25.000",
+    favorite: true,
     linea: ["bolsas"]
   },
   {
@@ -37,6 +45,8 @@ export const products = [
     imagen: "/images/products/cinta_adhesiva.webp",
     slug: "cinta-adhesiva",
     medidas: "5 cm x 50 m",
+    price: "$ 25.000",
+    favorite: false,
     linea: ["cintas"]
   },
   {
@@ -45,6 +55,8 @@ export const products = [
     imagen: "/images/products/cintapeligro.webp",
     slug: "cinta-peligro",
     medidas: "7 cm x 100 m",
+    price: "$ 25.000",
+    favorite: true,
     linea: ["seguridad"]
   },
   {
@@ -53,6 +65,8 @@ export const products = [
     imagen: "/images/products/cinta_termo.webp",
     slug: "cinta-termoaislante",
     medidas: "2x2 m",
+    price: "$ 25.000",
+    favorite: false,
     linea: ["cintas"]
   },
   {
@@ -61,6 +75,8 @@ export const products = [
     imagen: "/images/products/gorro.webp",
     slug: "gorro-desechable",
     medidas: "Talla única",
+    price: "$ 25.000",
+    favorite: true,
     linea: ["seguridad"]
   },
   {
@@ -69,6 +85,8 @@ export const products = [
     imagen: "/images/products/guantes_de_nitrilo.webp",
     slug: "guantes-nitrilo",
     medidas: "S, M, L, XL",
+    price: "$ 25.000",
+    favorite: true,
     linea: ["seguridad"]
   },
   {
@@ -77,6 +95,8 @@ export const products = [
     imagen: "/images/products/lona_payaso.webp",
     slug: "lona-payaso",
     medidas: "3x4 m",
+    price: "$ 25.000",
+    favorite: false,
     linea: ["agro"]
   },
   {
@@ -85,6 +105,8 @@ export const products = [
     imagen: "/images/products/mantel_decorativo.webp",
     slug: "mantel-decorativo",
     medidas: "1.5x2 m",
+    price: "$ 25.000",
+    favorite: true,
     linea: ["otros"]
   },
   {
@@ -93,6 +115,8 @@ export const products = [
     imagen: "/images/products/plastico_burbujas.webp",
     slug: "plastico-burbujas",
     medidas: "1.2 m x 10 m",
+    price: "$ 25.000",
+    favorite: false,
     linea: ["plasticos"]
   },
   {
@@ -101,6 +125,8 @@ export const products = [
     imagen: "/images/products/plastico_de_colores.webp",
     slug: "plastico-colores",
     medidas: "1x5 m",
+    price: "$ 25.000",
+    favorite: true,
     linea: ["plasticos"]
   },
   {
@@ -109,6 +135,8 @@ export const products = [
     imagen: "/images/products/plasticos-invernaderos.webp",
     slug: "plasticos-invernaderos",
     medidas: "6x50 m",
+    price: "$ 25.000",
+    favorite: false,
     linea: ["agro"]
   },
   {
@@ -117,6 +145,8 @@ export const products = [
     imagen: "/images/products/polisombra.webp",
     slug: "polisombra",
     medidas: "2x50 m",
+    price: "$ 25.000",
+    favorite: false,
     linea: ["agro"]
   },
   {
@@ -125,6 +155,8 @@ export const products = [
     imagen: "/images/products/stretch_film.webp",
     slug: "stretch-film",
     medidas: "50 cm x 300 m",
+    price: "$ 25.000",
+    favorite: true,
     linea: ["plasticos"]
   },
   {
@@ -133,6 +165,8 @@ export const products = [
     imagen: "/images/products/tapabocas.webp",
     slug: "tapabocas",
     medidas: "Talla única",
+    price: "$ 25.000",
+    favorite: false,
     linea: ["seguridad"]
   },
   {
@@ -141,6 +175,8 @@ export const products = [
     imagen: "/images/products/tapete_alto_trafico.webp",
     slug: "tapete-alto-trafico",
     medidas: "1.2x1.8 m",
+    price: "$ 25.000",
+    favorite: false,
     linea: ["otros"]
   },
   {
@@ -149,6 +185,8 @@ export const products = [
     imagen: "/images/products/vinilos.webp",
     slug: "vinilos-adhesivos",
     medidas: "1.5x5 m",
+    price: "$ 25.000",
+    favorite: true,
     linea: ["otros"]
   },
   {
@@ -157,6 +195,8 @@ export const products = [
     imagen: "/images/products/ziploc.webp",
     slug: "ziploc",
     medidas: "18x22 cm",
+    price: "$ 25.000",
+    favorite: false,
     linea: ["bolsas"]
   }
 ];

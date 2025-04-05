@@ -1,0 +1,13 @@
+---
+  const prod = Astro.props
+---
+<a
+  href={`/producto/${prod.slug}`}
+  class="w-72 min-h-[350px] flex flex-col justify-between p-5 h-auto hover:scale-105 duration-300 transition-all
+  items-center border-[1px] border-red-600 rounded-xl shadow-2xl">
+    <img src={`${prod.imagen}`} alt={`Producto ${prod.nombre}`}/>
+    <div class="flex flex-col">
+      <h3 class="text-center color-imperio text-xl font-semibold">{prod.nombre}</h3>
+      <p class="text-center text-xs">{prod.descripcion}</p>
+    </div>
+</a>

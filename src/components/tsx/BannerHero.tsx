@@ -1,12 +1,9 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import 'swiper/css';
-import 'swiper/css/effect-cards';
-import "../../styles/swiper-hero.css";
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
-
-
-import { EffectCards, Autoplay, } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 
 const images = [
   {
@@ -49,32 +46,34 @@ const images = [
 
 export default function BannerHero() {
   return (
-    <>
+    <section className="w-full h-[40vh]">
       <Swiper
-        effect={'cards'}
-        // loop={true}
-        // autoplay={{
-        //   delay: 3000,
-        // }}
-        // speed={1000}
-        grabCursor={true}
-        modules={[EffectCards, Autoplay]}
-        className="mySwiper"
-        cardsEffect={{
-          perSlideOffset: 2, // Controla el desplazamiento horizontal
-          perSlideRotate: 15, // Controla la rotación de la tarjeta
+        slidesPerView={4}
+        spaceBetween={4}
+        loop={true}
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: false
         }}
+        navigation={true}
+        modules={[Navigation, Autoplay]}
+        className="mySwiper h-[100%]"
       >
-      {images.map((src, index) => (
-        <SwiperSlide key={index}>
-          <img
-            src={src.image}
-            alt={`Slide ${index + 1}`}
-            className="w-full h-full object-cover absolute top-0 brightness-75"/>
-          <p className="text-xs md:text-base lg:text-xl absolute bottom-2 text-white">{src.name}</p>
-        </SwiperSlide>
-      ))}
+        {
+          images.map((src, index) => (
+            <SwiperSlide key={index} className="w-full h-full">
+              <div className="w-full group">
+                <img
+                  src={src.image}
+                  alt={`Slide ${index + 1}`}
+                  className="w-full h-full object-cover rounded-md transition-all duration-300
+                    absolute top-0 brightness-50 group-hover:brightness-100"/>
+                <p className="text-xs md:text-base ml-5 lg:text-xl absolute bottom-2 text-white group-hover:hidden">{src.name}</p>
+              </div>
+            </SwiperSlide>
+            ))
+          }
       </Swiper>
-    </>
+    </section>
   )
 }

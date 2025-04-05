@@ -1,12 +1,19 @@
 ---
 import { lineas } from "../dataSources/lineas";
 import { Capitalize } from "../utils/capitalize"
+import Search from "./icons/Search.astro";
 
 ---
-<nav class="fixed z-50 top-0 w-screen h-auto px-10 lg:px-20 xl:px-40 py-5">
-  <div class="w-full h-full absolute top-0 left-0 backdrop-blur-xl -z-10 mask-fade-top"></div>
+<nav class="fixed bg-imperio z-50 top-0 w-screen h-auto px-10 lg:px-20 xl:px-40 py-2">
   <div class="flex flex-row justify-between items-center w-full">
-    <ul class="hidden md:flex flex-row gap-10 text-xl font-bold">
+    <a href="/">
+      <img src="/images/logo.webp" class="rounded-full w-24 h-1w-24" alt="Imperio del Plástico en Bogotá y Colombia">
+    </a>
+    <form class="flex flex-row bg-white px-6 py-2 rounded-full">
+      <Search />
+      <input type="text" class="w-72 focus:outline-none focus:border-0 focus:ring-0" />
+    </form>
+    <ul class="hidden md:flex flex-row gap-10 text-xl font-semibold text-white ">
       <a href="/productos">
         <li>Productos</li>
       </a>
@@ -18,21 +25,14 @@ import { Capitalize } from "../utils/capitalize"
         >
           {
             lineas.map((linea) => (
-              <a class="block py-2 px-5 hover:bg-gray-100 text-base" href={`/linea/${linea}`}>{Capitalize(linea)}</a>
+              <a class="block py-2 px-5 hover:bg-gray-100 text-base text-black" href={`/linea/${linea}`}>{Capitalize(linea)}</a>
             ))
           }
         </div>
       </li>
-    </ul>
-    <a href="/">
-      <h2 class="font-medium md:text-xl lg:text-2xl text-outline">IMPERIO DEL</h2>
-      <h2 class="ml-4 font-black md:text-3xl lg:text-5xl text-outline">PLASTICO</h2>
-    </a>
-    <ul class="hidden md:flex flex-row gap-10 text-xl font-bold">
       <a href="/contacto">
         <li>Contactanos</li>
       </a>
-      <!-- <li>Cotiza</li> -->
     </ul>
   </div>
 </nav>
