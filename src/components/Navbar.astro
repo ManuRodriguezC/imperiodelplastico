@@ -1,7 +1,7 @@
 ---
 import { lineas } from "../dataSources/lineas";
 import { Capitalize } from "../utils/capitalize"
-import Search from "./icons/Search.astro";
+import SearchProd from "./SearchProd.astro";
 
 ---
 <nav class="fixed bg-imperio z-50 top-0 w-screen h-auto px-10 lg:px-20 xl:px-40 py-2">
@@ -9,10 +9,7 @@ import Search from "./icons/Search.astro";
     <a href="/">
       <img src="/images/logo.webp" class="rounded-full w-24 h-1w-24" alt="Imperio del Plástico en Bogotá y Colombia">
     </a>
-    <form class="flex flex-row bg-white px-6 py-2 rounded-full">
-      <Search />
-      <input type="text" class="w-72 focus:outline-none focus:border-0 focus:ring-0" />
-    </form>
+    <SearchProd />
     <ul class="hidden md:flex flex-row gap-10 text-xl font-semibold text-white ">
       <a href="/productos">
         <li>Productos</li>

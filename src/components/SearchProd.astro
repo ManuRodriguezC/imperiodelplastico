@@ -1,0 +1,61 @@
+<div class="relative">
+  <input
+    class="bg-white text-lg px-5 min-w-[400px] py-1 rounded-full focus:outline-none focus:border-0 focus:ring-0"
+    type="text"
+    placeholder="Buscar productos..."
+    id="searchInput"
+    autocomplete="off"
+  />
+  
+  <ul id="results" class="bg-white rounded-lg mt-2 shadow-md absolute top-10 min-w-[400px]">
+
+  <script is:inline>
+    const input = document.getElementById('searchInput');
+    const results = document.getElementById('results');
+
+    let products = []
+
+    async function fetchProducts() {
+      const response = await fetch('/api/productos');
+      products = await response.json();
+    }
+
+    function showResults(list) {
+      results.innerHTML = '';
+
+      list.forEach(product => {
+        const li = document.createElement('li');
+        li.textContent = product.nombre;
+        li.className = "px-4 py-2 cursor-pointer hover:bg-gray-100 rounded-lg";
+        
+        // Opcional: si quieres que al hacer clic se autocomplete el input
+        li.addEventListener('click', () => {
+          input.value = product.nombre;
+          results.innerHTML = '';
+          if (product.slug) {
+            window.location.href = `/producto/${product.slug}`;
+          }
+        });
+
+        results.appendChild(li);
+      });
+    }
+
+    input.addEventListener('input', () => {
+      const query = input.value.toLowerCase();
+
+      if (!query) {
+        results.innerHTML = ''; // Limpia si no hay búsqueda
+        return;
+      }
+
+      const filtered = products.filter(product =>
+        product.nombre.toLowerCase().includes(query)
+      );
+
+      showResults(filtered.length ? filtered : [{ nombre: 'No se encontraron productos' }]);
+    });
+
+    fetchProducts();
+  </script>
+</div>
