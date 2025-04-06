@@ -1,5 +1,6 @@
 ---
 import WhatsApp from '../components/icons/WhatsApp.astro';
+import FormContact from '../components/tsx/Contacto';
 import Layout from '../layouts/Layout.astro';
 
 const messageWhatsApp = "Gracias%20por%20comunicarte%20con%20Imperio%20del%20Plástico.%20¿Cómo%20podemos%20ayudarte?"
@@ -7,57 +8,68 @@ const messageWhatsApp = "Gracias%20por%20comunicarte%20con%20Imperio%20del%20Pl�
 
 <Layout>
   <main class="flex flex-col justify-end items-center h-auto pb-28 pt-20 lg:pt-32 xl:pt-40 px-6 md:px-20 lg:px-32 xl:px-40">
-    <h1 class="text-xl text-center my-10">Tenemos un gran equipo en el cual apoyarte y asesorarte</h1>
-    <div class="flex flex-col md:flex-row gap-5 md:gap-10 xl:gap-20">
-      <div
-        class="flex flex-col justify-center items-center hover:scale-105 transition-all duration-200 hover:bg-gray-600
-        p-12 rounded-2xl bg-gray-800 shadow-xl text-white  font-serif border-2 border-red-700">
-        <img class="w-52 h-52 object-cover rounded-full" src="/images/persona1.webp" alt="CEO Imperio del plastico">
-        <h3 class="text-xl py-2">Felipe ********</h3>
-        <p class="text-gray-400">CEO</p>
-        <a class="flex flex-row gap-2"
-          class="text-colorBlue cursor-pointer underline flex flex-row ml-5"
-          href=`https://api.whatsapp.com/send?phone=573203510858&text=${messageWhatsApp}`
-          target="_blank"
-          rel="noopener noreferrer">
-          <WhatsApp /> 
-          <p class="text-gray-400">
-            +57 3203510858
-          </p>
-        </a>
+    <h1
+      class="relative text-base md:text-xl lg:text-2xl xl:text-3xl text-center my-10 color-imperio after:content-[''] after:block after:w-[90%]
+    after:h-[4px] after:bg-red-600 after:absolute after:-bottom-2 after:left-[5%] after:rounded-full">
+      Te invitamos a que nos contactes por cualquiera de nuestros medios
+    </h1>
+
+    <div class="flex flex-col lg:flex-row-reverse justify-center items-center">
+
+      <div class="w-auto p-10">
+        <h3 class="bg-imperio text-2xl text-white font-bold text-center">Sede Principal</h3>
+        <p><strong>Dirección:</strong> Calle 6 Sur # 24 - 87</p>
+        <p><strong>Telefono:</strong> 601 6843319</p>
       </div>
-      <div
-        class="flex flex-col justify-center items-center hover:scale-105 transition-all duration-200 hover:bg-gray-600
-        p-12 rounded-2xl bg-gray-800 shadow-xl text-white  font-serif border-2 border-red-700">
-        <img class="w-52 h-52 object-cover rounded-full" src="/images/persona2.webp" alt="CEO Imperio del plastico">
-        <h3 class="text-xl py-2">Natalia *******</h3>
-        <p class="text-gray-400">RH</p>
-        <a class="flex flex-row gap-2"
-          class="text-colorBlue cursor-pointer underline flex flex-row ml-5"
-          href=`https://api.whatsapp.com/send?phone=573132871471&text=${messageWhatsApp}`
-          target="_blank"
-          rel="noopener noreferrer">
-          <WhatsApp /> 
-          <p class="text-gray-400">
-            +57 3132871471
-          </p>
-        </a>
-      </div>
-    </div>
-    <!-- <p class="py-20">En caso de que quieras visitarnos puedes encontrarnos en nuestro local</p> -->
-    <div class="flex flex-col xl:flex-row mt-20">
-      <img
+
+      <div class="flex flex-col border-4 border-red-500 rounded-lg">
+        <img
         src="/images/local.webp"
         alt="Nuestra local en imperios del plastico"
-        class="xl:h-[500px] h-auto w-full xl:w-auto"
-      />
-      <iframe 
-        class="w-full xl:w-[200px] h-auto xl:h-[500px] shadow-md"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248.55196437324668!2d-74.11936527840138!3d4.624145921464077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9910db31d9b1%3A0xb3c0ce660dfe336f!2sEl%20imperio%20del%20plastico!5e0!3m2!1ses-419!2sco!4v1743353623076!5m2!1ses-419!2sco"
-        allowfullscreen 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+        class="h-auto w-[350px] rounded-t-md"
+        />
+        <iframe 
+          class="w-full h-auto xl:h-[100px] shadow-md"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248.55196437324668!2d-74.11936527840138!3d4.624145921464077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9910db31d9b1%3A0xb3c0ce660dfe336f!2sEl%20imperio%20del%20plastico!5e0!3m2!1ses-419!2sco!4v1743353623076!5m2!1ses-419!2sco"
+          allowfullscreen 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+    </div>
+
+    <div class="flex flex-col gap-5 justify-center items-center">
+      <h4 class="py-5 text-xl color-imperio">Escribenos a nuestras lineas de WhatsApp o Dejanos tus datos para que te contactemos</h4>
+      <div class="flex flex-col justify-center items-center">
+        <p class="mb-5">
+          Nuestras Lineas
+        </p>
+        <div class="flex flex-row gap-10">
+          <a class="flex flex-row gap-2"
+            class="text-colorBlue cursor-pointer underline flex flex-row ml-5"
+            href=`https://api.whatsapp.com/send?phone=573203510858&text=${messageWhatsApp}`
+            target="_blank"
+            rel="noopener noreferrer">
+            <WhatsApp /> 
+            <p class="font-serif">
+              +57 3203510858
+            </p>
+          </a>
+          <a class="flex flex-row gap-2"
+            class="text-colorBlue cursor-pointer underline flex flex-row ml-5"
+            href=`https://api.whatsapp.com/send?phone=573132871471&text=${messageWhatsApp}`
+            target="_blank"
+            rel="noopener noreferrer">
+            <WhatsApp /> 
+            <p class="font-serif">
+              +57 3132871471
+            </p>
+          </a>
+        </div>
+      </div>
+
+      <FormContact client:load/>
     </div>
   </main>
 </Layout>
