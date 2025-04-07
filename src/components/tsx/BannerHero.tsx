@@ -48,8 +48,8 @@ export default function BannerHero() {
   return (
     <section className="w-full h-[40vh]">
       <Swiper
-        slidesPerView={4}
-        spaceBetween={4}
+        slidesPerView={3}
+        spaceBetween={3}
         loop={true}
         autoplay={{
           delay: 4000,

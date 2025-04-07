@@ -14,8 +14,12 @@ import SearchProd from "./SearchProd.astro";
       <SearchProd id="desktop"/>
     </div>
     <ul class="hidden md:flex flex-row gap-10 text-xl font-semibold text-white">
-      <a href="/productos">
-        <li>Productos</li>
+      <a href="/productos" class="group">
+        <li class="relative group text-white before:content-[''] before:absolute before:-bottom-1 before:left-0 before:h-1
+        before:w-0 before:bg-white before:rounded-full before:transition-width before:ease-in-out before:duration-300 group-hover:before:w-full">
+          Lineas
+        </li>
+        
       </a>
       <li class="relative group"> <!-- Grupo para manejar hover -->
         Lineas
@@ -30,8 +34,11 @@ import SearchProd from "./SearchProd.astro";
           }
         </div>
       </li>
-      <a href="/contacto">
-        <li>Contactanos</li>
+      <a href="/contacto" class="group">
+        <li class="relative group text-white before:content-[''] before:absolute before:-bottom-1 before:left-0 before:h-1
+          before:w-0 before:bg-white before:rounded-full before:transition-width before:ease-in-out before:duration-300 group-hover:before:w-full">
+          Contactanos
+        </li>
       </a>
     </ul>
 
@@ -48,7 +55,7 @@ import SearchProd from "./SearchProd.astro";
       class="fixed w-screen transform translate-x-full transition-all opacity-0 duration-300 h-screen bg-black/30 right-0 top-0"
 
     >
-      <div class="absolute top-0 w-[80%] h-full bg-white right-0 overflow-visible">
+      <div class="absolute top-0 w-[90%] h-full bg-white right-0 overflow-visible">
         <div class="relative w-full h-auto flex flex-row justify-between items-center p-4 bg-imperio">
           <SearchProd id="movil"/>
           <button id="close-nav" class="">
