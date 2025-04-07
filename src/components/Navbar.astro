@@ -1,16 +1,19 @@
 ---
 import { lineas } from "../dataSources/lineas";
 import { Capitalize } from "../utils/capitalize"
+import Close from "./icons/Close.astro";
 import SearchProd from "./SearchProd.astro";
 
 ---
 <header class="fixed bg-imperio z-50 top-0 w-screen h-auto px-10 lg:px-20 xl:px-40 py-2">
   <nav class="flex flex-row justify-between items-center w-full">
     <a href="/">
-      <img src="/images/logo.webp" class="rounded-full w-24 h-1w-24" alt="Imperio del Plástico en Bogotá y Colombia">
+      <img src="/images/logo.webp" class="rounded-full w-20 h-20 md:w-24 md:h-24" alt="Imperio del Plástico en Bogotá y Colombia">
     </a>
-    <SearchProd />
-    <ul class="hidden md:flex flex-row gap-10 text-xl font-semibold text-white ">
+    <div class="hidden md:block">
+      <SearchProd id="desktop"/>
+    </div>
+    <ul class="hidden md:flex flex-row gap-10 text-xl font-semibold text-white">
       <a href="/productos">
         <li>Productos</li>
       </a>
@@ -31,5 +34,127 @@ import SearchProd from "./SearchProd.astro";
         <li>Contactanos</li>
       </a>
     </ul>
+
+    <button
+      id="open-nav"
+      class="block relative md:hidden w-8 h-1 bg-white rounded-full
+        before:content-[''] before:block before:w-full before:h-1 before:bg-white before:absolute before:-top-2 before:rounded-full
+        after:content-[''] after:block after:w-full after:h-1 after:bg-white after:absolute after:top-2 after:rounded-full">
+    </button>
+  
+
+    <div
+      id="phone-nav"
+      class="fixed w-screen transform translate-x-full transition-all opacity-0 duration-300 h-screen bg-black/30 right-0 top-0"
+
+    >
+      <div class="absolute top-0 w-[80%] h-full bg-white right-0 overflow-visible">
+        <div class="relative w-full h-auto flex flex-row justify-between items-center p-4 bg-imperio">
+          <SearchProd id="movil"/>
+          <button id="close-nav" class="">
+            <Close />
+          </button>
+        </div>
+        <ul class="flex flex-col p-5 gap-5">
+          <a href="/productos">
+            <li class="text-xl">Productos</li>
+          </a>
+          <li class="text-xl" id="lineas"> <!-- Grupo para manejar hover -->
+            Lineas
+            <div
+              id="lista-lineas"
+              class="hidden"
+            >
+              {
+                lineas.map((linea) => (
+                  <a class="block py-2 px-5 hover:bg-gray-100 text-base text-black" href={`/linea/${linea}`}>{Capitalize(linea)}</a>
+                ))
+              }
+            </div>
+          </li>
+          <a href="/contacto">
+            <li class="text-xl">Contactanos</li>
+          </a>
+        </ul>
+      </div>
+    </div>
   </nav>
 </header>
+
+<script is:inline>
+  const openNav = document.getElementById("open-nav");
+  const closeNav = document.getElementById("close-nav");
+  const contNav = document.getElementById("phone-nav");
+  const lineas = document.getElementById("lineas")
+  const listaLineas = document.getElementById("lista-lineas")
+
+  lineas?.addEventListener('click', () => {
+    listaLineas?.classList.toggle('hidden')
+  })
+
+  openNav?.addEventListener("click", () => {
+    contNav?.classList.add("translate-x-0", "opacity-100");
+    contNav?.classList.remove("translate-x-full");
+    initSearch("movil");
+  });
+
+  closeNav?.addEventListener("click", () => {
+    contNav?.classList.add("translate-x-full"); // Alterna entre translate-x-0 y translate-x-full
+    contNav?.classList.remove("translate-x-0"); // Alterna entre translate-x-0 y translate-x-full
+    contNav?.classList.add("opacity-0"); // Alterna entre translate-x-0 y translate-x-full
+  });
+
+  function initSearch(id) {
+    const input = document.getElementById(`searchInput-${id}`);
+    const results = document.getElementById(`results-${id}`);
+
+    if (!input || !results) return;
+
+    let products = [];
+
+    async function fetchProducts() {
+      const response = await fetch('/api/productos');
+      products = await response.json();
+    }
+
+    function showResults(list) {
+      results.innerHTML = '';
+
+      list.forEach(product => {
+        const li = document.createElement('li');
+        li.textContent = product.nombre;
+        li.className = "px-4 py-2 cursor-pointer hover:bg-gray-100 rounded-lg";
+
+        li.addEventListener('click', () => {
+          input.value = product.nombre;
+          results.innerHTML = '';
+          if (product.slug) {
+            window.location.href = `/producto/${product.slug}`;
+          }
+        });
+
+        results.appendChild(li);
+      });
+    }
+
+    input.addEventListener('input', () => {
+      console.log("test")
+      const query = input.value.toLowerCase();
+
+      if (!query) {
+        results.innerHTML = '';
+        return;
+      }
+
+      const filtered = products.filter(product =>
+        product.nombre.toLowerCase().includes(query)
+      );
+
+      showResults(filtered.length ? filtered : [{ nombre: 'No se encontraron productos' }]);
+    });
+
+    fetchProducts();
+  }
+  initSearch("desktop");
+
+</script>
