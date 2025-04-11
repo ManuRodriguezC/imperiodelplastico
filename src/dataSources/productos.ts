@@ -23,16 +23,44 @@ export const products = [
     linea: ["bolsas"]
   },
   {
-    nombre: "Bolsa de Aluminio",
-    descripcion: "Bolsa térmica de aluminio, perfecta para conservación de alimentos.",
-    imagen: "/images/products/bolsa_aluminio.webp",
-    slug: "bolsa-aluminio",
-    medidas: ["R/17", "R/19", "R/23", "R/25", "RP/25"],
-    favorite: true,
+    nombre: "Bolsas Ziploc",
+    descripcion: "Bolsas resellables ideales para conservar alimentos y otros productos.",
+    imagen: "/images/products/ziploc.webp",
+    slug: "ziploc",
+    medidas: ["18x22 cm"],
+    price: "$ 25.000",
+    favorite: false,
+    linea: ["bolsas"]
+  },
+  // {
+  //   nombre: "Bolsa de Aluminio",
+  //   descripcion: "Bolsa térmica de aluminio, perfecta para conservación de alimentos.",
+  //   imagen: "/images/products/bolsa_aluminio.webp",
+  //   slug: "bolsa-aluminio",
+  //   medidas: ["R/17", "R/19", "R/23", "R/25", "RP/25"],
+  //   favorite: true,
+  //   linea: ["bolsas"]
+  // },
+  {
+    nombre: "Bolsas Poliprofileno",
+    descripcion: "Bolsa de polipropileno resistente, reutilizable y versátil para embalaje y almacenamiento seguro.",
+    imagen: "/images/products/bolsa_poliprofileno.webp",
+    slug: "bolsas-poliprofileno",
+    medidas: ["8x16 cm", "10x20 cm", "12x22 cm", "14x28 cm"],
+    favorite: false,
     linea: ["bolsas"]
   },
   {
     nombre: "Bolsas de Papel",
+    descripcion: "Bolsa de seguridad con cierre inviolable, ideal para transporte y resguardo de documentos o valores.",
+    imagen: "/images/products/bolsa_seguridad.webp",
+    slug: "bolsas-seguridad",
+    medidas: ["8x16 cm", "10x20 cm", "12x22 cm", "14x28 cm", "16x32 cm", "18x35 cm", "20x40 cm", "24x45 cm", "28x50 cm", "32x55 cm"],
+    favorite: true,
+    linea: ["bolsas"]
+  },
+  {
+    nombre: "Bolsas de Seguridad",
     descripcion: "Bolsas ecológicas de papel, ideales para tiendas y supermercados.",
     imagen: "/images/products/bolsas_papel.webp",
     slug: "bolsas-papel",
@@ -87,6 +115,16 @@ export const products = [
     medidas: ["S, M, L, XL"],
     price: "$ 25.000",
     favorite: true,
+    linea: ["seguridad"]
+  },
+  {
+    nombre: "Tapabocas",
+    descripcion: "Mascarilla desechable de protección personal.",
+    imagen: "/images/products/tapabocas.webp",
+    slug: "tapabocas",
+    medidas: ["Talla única"],
+    price: "$ 25.000",
+    favorite: false,
     linea: ["seguridad"]
   },
   {
@@ -180,16 +218,6 @@ export const products = [
     linea: ["plasticos"]
   },
   {
-    nombre: "Tapabocas",
-    descripcion: "Mascarilla desechable de protección personal.",
-    imagen: "/images/products/tapabocas.webp",
-    slug: "tapabocas",
-    medidas: ["Talla única"],
-    price: "$ 25.000",
-    favorite: false,
-    linea: ["seguridad"]
-  },
-  {
     nombre: "Tapete alto tráfico",
     descripcion: "Tapete resistente para áreas de alto tránsito.",
     imagen: "/images/products/tapete_alto_trafico.webp",
@@ -209,14 +237,4 @@ export const products = [
     favorite: true,
     linea: ["otros"]
   },
-  {
-    nombre: "Bolsas Ziploc",
-    descripcion: "Bolsas resellables ideales para conservar alimentos y otros productos.",
-    imagen: "/images/products/ziploc.webp",
-    slug: "ziploc",
-    medidas: ["18x22 cm"],
-    price: "$ 25.000",
-    favorite: false,
-    linea: ["bolsas"]
-  }
 ];

@@ -14,7 +14,10 @@ export function getStaticPaths() {
 const { producto } = Astro.params
 let findProduct = products.find(prod => prod.slug.toString() === producto.toString());
 ---
-<Layout>
+<Layout
+  title=`${findProduct?.nombre} | Imperio del Plastico`
+  description = `En Imperio del Plástico te ofrecemos la mejor calidad en ${findProduct?.nombre}, brindándote la solución ideal para tus necesidades.`
+  >
   <main class="flex flex-col justify-end items-center h-auto pb-28 pt-20 lg:pt-32 xl:pt-40 px-6 md:px-20 lg:px-32 xl:px-40">
     <ProductoOnly {...findProduct}/>
   </main>

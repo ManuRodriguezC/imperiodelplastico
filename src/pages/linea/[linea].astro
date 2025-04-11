@@ -1,6 +1,5 @@
 ---
 import CartProduct from "../../components/CartProduct.astro";
-import ProductoRender from "../../components/ProductoRender.astro";
 import { lineas } from "../../dataSources/lineas";
 import { products } from "../../dataSources/productos";
 import Layout from "../../layouts/Layout.astro";
@@ -16,7 +15,10 @@ export function getStaticPaths() {
 const { linea } = Astro.params
 const filterProducts = products.filter(prod => prod.linea.includes(linea.toString()));
 ---
-<Layout>
+<Layout
+  title=`${linea.toUpperCase()} | Imperio del plastico`
+  description = `Explora nuestra línea de ${linea} en Imperio del Plástico, donde encontrarás productos de calidad diseñados para ofrecerte soluciones confiables para cada necesidad.`
+  >
   <main class="flex flex-col justify-end items-center h-auto pb-28 pt-20 lg:pt-32 xl:pt-40 px-6 md:px-20 lg:px-32 xl:px-40">
     <h1 class="text-2xl my-10 text-center">
       En <strong class="text-red-700">imperio del plastico</strong>, puedes encontrar todo sobre <strong class="text-red-700">{linea.toUpperCase()}</strong>

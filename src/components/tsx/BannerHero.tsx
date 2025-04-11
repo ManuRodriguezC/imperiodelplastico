@@ -11,6 +11,10 @@ const images = [
     "name": ""
   },
   {
+    "image": "/images/local.webp",
+    "name": "Visitanos"
+  },
+  {
     "image": "/images/plastico-invernadero.webp",
     "name": "Plasticos"
   },

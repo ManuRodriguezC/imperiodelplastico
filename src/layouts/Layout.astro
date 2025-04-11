@@ -3,20 +3,57 @@ import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
 import WhatsappButton from "../components/whatsappButton.astro";
 import "../styles/global.css";
+
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es">
 	<head>
-		<title>Imperio del Plastico</title>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/jpg+xml" href="/images/logo.jpg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="description" content={description} />
+		<meta name="keywords" content="plásticos Bogotá, bolsas plásticas, empaques seguridad, plásticos para el agro, soluciones embalaje, Imperio del Plástico" />
+		<meta name="robots" content="index, follow" />
 		<meta name="generator" content={Astro.generator} />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Bytesized&family=Days+One&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Monomakh&family=Noto+Serif+KR:wght@200..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+		<meta name="language" content="es" />
+		
+		<!-- Canonical URL -->
+		<link rel="canonical" href="https://www.imperiodelplastico.com/" />
+	
+		<!-- Open Graph para redes -->
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content="https://www.imperiodelplastico.com/images/logo.jpg" />
+		<meta property="og:url" content="https://www.imperiodelplastico.com/" />
+		<meta property="og:type" content="website" />
+		
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content="https://www.imperiodelplastico.com/images/logo.jpg" />
+	
+		<!-- Favicon -->
+		<link rel="icon" type="image/jpg" href="/images/logo.jpg" />
+		<link rel="apple-touch-icon" href="/images/logo.jpg" />
+	
+		<!-- Fuentes Google mejor optimizadas -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+	
+		<!-- Título dinámico -->
+		<title>{title}</title>
 	</head>
+	
 		<body>
 			<Navbar />
 			<slot />
