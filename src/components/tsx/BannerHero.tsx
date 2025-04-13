@@ -7,7 +7,7 @@ import { Autoplay, Navigation } from "swiper/modules";
 
 const images = [
   {
-    "image": "/images/logo.webp",
+    "image": "/images/logo_new.webp",
     "name": ""
   },
   {

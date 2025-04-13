@@ -1,12 +1,13 @@
 ---
 import Favorites from "./Favorites.astro";
 import Hero from "./Hero.astro";
-import SectionProducts from "./SectionProducts.astro";
+import BannerLoop from "./tsx/BannerLoop";
 ---
 
 <main class="flex flex-col justify-end items-center h-auto pb-28">
+	<BannerLoop client:load/>
 	<Hero />
-	 <Favorites />
+	<Favorites />
 </main>
 
 

@@ -14,11 +14,11 @@ html {
 }
 
 .bg-imperio {
-  background-color: #E60403
+  background-image: radial-gradient(circle at 68% 88%, hsla(193,0%,4%,0.06) 0%, hsla(193,0%,4%,0.06) 68%,transparent 68%, transparent 100%),radial-gradient(circle at 64% 21%, hsla(193,0%,4%,0.06) 0%, hsla(193,0%,4%,0.06) 45%,transparent 45%, transparent 100%),radial-gradient(circle at 18% 4%, hsla(193,0%,4%,0.06) 0%, hsla(193,0%,4%,0.06) 26%,transparent 26%, transparent 100%),radial-gradient(circle at 17% 69%, hsla(193,0%,4%,0.06) 0%, hsla(193,0%,4%,0.06) 15%,transparent 15%, transparent 100%),radial-gradient(circle at 84% 26%, hsla(193,0%,4%,0.06) 0%, hsla(193,0%,4%,0.06) 45%,transparent 45%, transparent 100%),linear-gradient(45deg, #D21408,#D21408);
 }
 
 .color-imperio {
-  color: #E60403;
+  color: #D21408;
 }
 
 .hero-back {

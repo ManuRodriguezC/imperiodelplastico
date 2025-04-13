@@ -8,20 +8,20 @@ export const products = [
     favorite: true,
     linea: ["bolsas"]
   },
-  {
-    nombre: "Bolsa Hermética",
-    descripcion: "Bolsas con cierre hermético para conservar alimentos y otros productos.",
-    imagen: "/images/products/bolsa_hermetica.webp",
-    slug: "bolsa-hermetica",
-    medidas: [
-      "3x4 cm", "5x5 cm", "5x6 cm", "6x9 cm", "8x10 cm", "8x14 cm",
-      "10x14 cm", "12x12 cm", "12x12 cm", "12x14 cm", "14x14 cm", "14x18 cm",
-      "14x22 cm", "17x18 cm", "10x20 cm", "15x20 cm", "18x22 cm", "20x24 cm",
-      "20x30 cm", "23x32 cm", "25x30 cm", "25x36 cm", "30x40 cm", "40x48 cm",
-    ],
-    favorite: false,
-    linea: ["bolsas"]
-  },
+  // {
+  //   nombre: "Bolsa Hermética",
+  //   descripcion: "Bolsas con cierre hermético para conservar alimentos y otros productos.",
+  //   imagen: "/images/products/bolsa_hermetica.webp",
+  //   slug: "bolsa-hermetica",
+  //   medidas: [
+  //     "3x4 cm", "5x5 cm", "5x6 cm", "6x9 cm", "8x10 cm", "8x14 cm",
+  //     "10x14 cm", "12x12 cm", "12x12 cm", "12x14 cm", "14x14 cm", "14x18 cm",
+  //     "14x22 cm", "17x18 cm", "10x20 cm", "15x20 cm", "18x22 cm", "20x24 cm",
+  //     "20x30 cm", "23x32 cm", "25x30 cm", "25x36 cm", "30x40 cm", "40x48 cm",
+  //   ],
+  //   favorite: false,
+  //   linea: ["bolsas"]
+  // },
   {
     nombre: "Bolsas Ziploc",
     descripcion: "Bolsas resellables ideales para conservar alimentos y otros productos.",
@@ -32,15 +32,6 @@ export const products = [
     favorite: false,
     linea: ["bolsas"]
   },
-  // {
-  //   nombre: "Bolsa de Aluminio",
-  //   descripcion: "Bolsa térmica de aluminio, perfecta para conservación de alimentos.",
-  //   imagen: "/images/products/bolsa_aluminio.webp",
-  //   slug: "bolsa-aluminio",
-  //   medidas: ["R/17", "R/19", "R/23", "R/25", "RP/25"],
-  //   favorite: true,
-  //   linea: ["bolsas"]
-  // },
   {
     nombre: "Bolsas Poliprofileno",
     descripcion: "Bolsa de polipropileno resistente, reutilizable y versátil para embalaje y almacenamiento seguro.",
@@ -51,7 +42,7 @@ export const products = [
     linea: ["bolsas"]
   },
   {
-    nombre: "Bolsas de Papel",
+    nombre: "Bolsas de Seguridad",
     descripcion: "Bolsa de seguridad con cierre inviolable, ideal para transporte y resguardo de documentos o valores.",
     imagen: "/images/products/bolsa_seguridad.webp",
     slug: "bolsas-seguridad",
@@ -60,11 +51,21 @@ export const products = [
     linea: ["bolsas"]
   },
   {
-    nombre: "Bolsas de Seguridad",
+    nombre: "Bolsas de Papel",
     descripcion: "Bolsas ecológicas de papel, ideales para tiendas y supermercados.",
     imagen: "/images/products/bolsas_papel.webp",
     slug: "bolsas-papel",
     medidas: ["8x16 cm", "10x20 cm", "12x22 cm", "14x28 cm", "16x32 cm", "18x35 cm", "20x40 cm", "24x45 cm", "28x50 cm", "32x55 cm"],
+    favorite: true,
+    linea: ["bolsas"]
+  },
+  
+  {
+    nombre: "Bolsa Celofán",
+    descripcion: "Bolsas de celofán transparentes, ideales para empaquetar prendas de vestir, regalos, documentos y más.",
+    imagen: "/images/products/bolsa_celofan.webp",
+    slug: "bolsa-celofan",
+    medidas: ["20.32x27.94 cm"],
     favorite: true,
     linea: ["bolsas"]
   },
@@ -225,16 +226,6 @@ export const products = [
     medidas: ["1.2x1.8 m"],
     price: "$ 25.000",
     favorite: false,
-    linea: ["otros"]
-  },
-  {
-    nombre: "Vinilos adhesivos",
-    descripcion: "Vinilos de alta calidad para decoración y publicidad.",
-    imagen: "/images/products/vinilos.webp",
-    slug: "vinilos-adhesivos",
-    medidas: ["1.5x5 m"],
-    price: "$ 25.000",
-    favorite: true,
     linea: ["otros"]
   },
 ];
