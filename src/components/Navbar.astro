@@ -19,16 +19,17 @@ import SearchProd from "./SearchProd.astro";
     <ul class="hidden md:flex flex-row gap-10 text-xl font-semibold text-white">
       <a href="/productos" class="group">
         <li class="relative group text-white before:content-[''] before:absolute before:-bottom-1 before:left-0 before:h-1
-        before:w-0 before:bg-white before:rounded-full before:transition-width before:ease-in-out before:duration-300 group-hover:before:w-full">
+        before:w-0 before:bg-white before:rounded-full before:transition-width before:ease-in-out before:duration-300
+        group-hover:before:w-full animate-blurred-fade-in animate-delay-100">
           Productos
         </li>
         
       </a>
-      <li class="relative group"> <!-- Grupo para manejar hover -->
+      <li class="relative group animate-blurred-fade-in animate-delay-100"> <!-- Grupo para manejar hover -->
         Lineas
         <div
           class="absolute left-0 w-72 h-auto border-2 border-gray-400 rounded-md bg-white shadow-lg
-            opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300"
+            opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-100"
         >
           {
             lineas.map((linea) => (
@@ -39,7 +40,8 @@ import SearchProd from "./SearchProd.astro";
       </li>
       <a href="/contacto" class="group">
         <li class="relative group text-white before:content-[''] before:absolute before:-bottom-1 before:left-0 before:h-1
-          before:w-0 before:bg-white before:rounded-full before:transition-width before:ease-in-out before:duration-300 group-hover:before:w-full">
+          before:w-0 before:bg-white before:rounded-full before:transition-width before:ease-in-out before:duration-300
+          group-hover:before:w-full animate-blurred-fade-in animate-delay-100">
           Contactanos
         </li>
       </a>

@@ -61,8 +61,15 @@ export default function BannerLoop() {
                         className="w-full h-full absolute z-10 flex flex-col justify-around p-4 md:p-20 text-white"
                       >
                         <div>
-                          <h2 className="text-center md:text-left text-xl md:text-4xl xl:text-5xl font-bold mb-2 md:mb-6">{sector.title}</h2>
-                          <p className="w-[200px] ml-24 md:ml-4 lg:w-[500px] text-xs md:text-xl lg:text-2xl text-center md:text-justify font-light py-5">{sector.description}</p>
+                          <h2
+                            className="text-center md:text-left text-xl md:text-4xl xl:text-5xl font-bold
+                              mb-2 md:mb-6 animate-fade-in animate-delay-250">
+                            {sector.title}
+                          </h2>
+                          <p className="w-[200px] ml-24 md:ml-4 lg:w-[500px] text-xs md:text-xl lg:text-2xl text-center
+                            md:text-justify font-light py-5 animate-fade-in animate-delay-500">
+                            {sector.description}
+                          </p>
                         </div>
 
                       </div>
