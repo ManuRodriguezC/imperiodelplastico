@@ -7,16 +7,12 @@ import { Autoplay, Navigation } from "swiper/modules";
 
 const images = [
   {
-    "image": "/images/logo_new.webp",
-    "name": ""
-  },
-  {
     "image": "/images/local.webp",
     "name": "Visitanos"
   },
   {
-    "image": "/images/plastico-invernadero.webp",
-    "name": "Plasticos"
+    "image": "/images/invernaderos.webp",
+    "name": "Plasticos Invernaderos"
   },
   {
     "image": "/images/polisombras.webp",

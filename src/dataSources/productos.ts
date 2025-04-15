@@ -33,7 +33,7 @@ export const products = [
     linea: ["bolsas"]
   },
   {
-    nombre: "Bolsas Poliprofileno",
+    nombre: "Bolsas Polipropileno",
     descripcion: "Bolsa de polipropileno resistente, reutilizable y versátil para embalaje y almacenamiento seguro.",
     imagen: "/images/products/bolsa_poliprofileno.webp",
     slug: "bolsas-poliprofileno",
