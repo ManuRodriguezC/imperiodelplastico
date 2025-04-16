@@ -4,30 +4,16 @@ export const products = [
     descripcion: "Bolsa resistente para desechos, ideal para uso doméstico e industrial.",
     imagen: "/images/products/bolsa_basura.webp",
     slug: "bolsa-basura_negra",
-    medidas: ["10x20 cm", "8x12 cm", "30x40 cm"],
+    medidas: ["16x24 cm", "20x28 cm", "22x32 cm", "24x36 cm", "28x40 cm", "30x40 cm"],
     favorite: true,
     linea: ["bolsas"]
   },
-  // {
-  //   nombre: "Bolsa Hermética",
-  //   descripcion: "Bolsas con cierre hermético para conservar alimentos y otros productos.",
-  //   imagen: "/images/products/bolsa_hermetica.webp",
-  //   slug: "bolsa-hermetica",
-  //   medidas: [
-  //     "3x4 cm", "5x5 cm", "5x6 cm", "6x9 cm", "8x10 cm", "8x14 cm",
-  //     "10x14 cm", "12x12 cm", "12x12 cm", "12x14 cm", "14x14 cm", "14x18 cm",
-  //     "14x22 cm", "17x18 cm", "10x20 cm", "15x20 cm", "18x22 cm", "20x24 cm",
-  //     "20x30 cm", "23x32 cm", "25x30 cm", "25x36 cm", "30x40 cm", "40x48 cm",
-  //   ],
-  //   favorite: false,
-  //   linea: ["bolsas"]
-  // },
   {
     nombre: "Bolsas Ziploc",
     descripcion: "Bolsas resellables ideales para conservar alimentos y otros productos.",
     imagen: "/images/products/ziploc.webp",
     slug: "ziploc",
-    medidas: ["18x22 cm"],
+    medidas: ["3x4 cm", "x5 cm", "5x6 cm", "6x9 cm", "8x10 cm", "10x14 cm", "14x14 cm", "22x18 cm", "25x36 cm"],
     price: "$ 25.000",
     favorite: false,
     linea: ["bolsas"]
@@ -37,7 +23,7 @@ export const products = [
     descripcion: "Bolsa de polipropileno resistente, reutilizable y versátil para embalaje y almacenamiento seguro.",
     imagen: "/images/products/bolsa_poliprofileno.webp",
     slug: "bolsas-poliprofileno",
-    medidas: ["8x16 cm", "10x20 cm", "12x22 cm", "14x28 cm"],
+    medidas: ["4x8 cm", "5x9 cm", "7x10 cm", "8x12 cm", "9x14 cm", "10x16 cm", "12x14 cm", "14x20 cm", "16x24 cm"],
     favorite: false,
     linea: ["bolsas"]
   },
@@ -46,7 +32,7 @@ export const products = [
     descripcion: "Bolsa de seguridad con cierre inviolable, ideal para transporte y resguardo de documentos o valores.",
     imagen: "/images/products/bolsa_seguridad.webp",
     slug: "bolsas-seguridad",
-    medidas: ["8x16 cm", "10x20 cm", "12x22 cm", "14x28 cm", "16x32 cm", "18x35 cm", "20x40 cm", "24x45 cm", "28x50 cm", "32x55 cm"],
+    medidas: ["16x24 cm", "23x34 cm", "30x40 cm", "30x50 cm"],
     favorite: true,
     linea: ["bolsas"]
   },
@@ -74,7 +60,7 @@ export const products = [
     descripcion: "Cinta adhesiva multiusos para embalaje y sellado.",
     imagen: "/images/products/cinta_adhesiva.webp",
     slug: "cinta-adhesiva",
-    medidas: ["100 mts", "200mts", "300mts", "600mts"],
+    medidas: ["50 mts", "100 mts", "200mts", "300mts", "500mts", "700mts"],
     favorite: false,
     linea: ["cintas"]
   },

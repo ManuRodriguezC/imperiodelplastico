@@ -6,10 +6,10 @@ import 'swiper/css/navigation';
 import { Autoplay, Navigation } from "swiper/modules";
 
 const images = [
-  {
-    "image": "/images/local.webp",
-    "name": "Visitanos"
-  },
+  // {
+  //   "image": "/images/local.webp",
+  //   "name": "Visitanos"
+  // },
   {
     "image": "/images/invernaderos.webp",
     "name": "Plasticos Invernaderos"
@@ -31,8 +31,8 @@ const images = [
     "name": "Cintas"
   },
   {
-    "image": "/images/cintas2.webp",
-    "name": "Cintas protectoras"
+    "image": "/images/plastico_burbujas.webp",
+    "name": "Plastico Burbujas"
   },
   {
     "image": "/images/strech.webp",
