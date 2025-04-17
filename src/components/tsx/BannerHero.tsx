@@ -6,13 +6,13 @@ import 'swiper/css/navigation';
 import { Autoplay, Navigation } from "swiper/modules";
 
 const images = [
-  // {
-  //   "image": "/images/local.webp",
-  //   "name": "Visitanos"
-  // },
   {
     "image": "/images/invernaderos.webp",
     "name": "Plasticos Invernaderos"
+  },
+  {
+    "image": "/images/empaques1.webp",
+    "name": "Todo en Empaques"
   },
   {
     "image": "/images/polisombras.webp",
@@ -48,9 +48,8 @@ export default function BannerHero() {
   return (
     <section className="w-full h-[40vh]">
       <Swiper
-        slidesPerView={3}
-        spaceBetween={3}
         loop={true}
+        spaceBetween={3}
         autoplay={{
           delay: 4000,
           disableOnInteraction: false
@@ -58,6 +57,17 @@ export default function BannerHero() {
         navigation={true}
         modules={[Navigation, Autoplay]}
         className="mySwiper h-[100%]"
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+          },
+          600: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3, // puedes ajustar esto a tu gusto
+          },
+        }}
       >
         {
           images.map((src, index) => (
@@ -68,7 +78,7 @@ export default function BannerHero() {
                   alt={`Slide ${index + 1}`}
                   className="w-full h-full object-cover rounded-md transition-all duration-300
                     absolute top-0 brightness-50 group-hover:brightness-100"/>
-                <p className="text-xs md:text-base ml-5 lg:text-xl absolute bottom-2 text-white group-hover:hidden">{src.name}</p>
+                <p className=" ml-5 text-xl absolute bottom-2 text-white group-hover:hidden">{src.name}</p>
               </div>
             </SwiperSlide>
             ))
