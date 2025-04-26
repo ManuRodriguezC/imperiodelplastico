@@ -36,15 +36,15 @@ export const products = [
     favorite: true,
     linea: ["bolsas"]
   },
-  {
-    nombre: "Bolsas de Papel",
-    descripcion: "Bolsas ecológicas de papel, ideales para tiendas y supermercados.",
-    imagen: "/images/products/bolsas_papel.webp",
-    slug: "bolsas-papel",
-    medidas: ["8x16 cm", "10x20 cm", "12x22 cm", "14x28 cm", "16x32 cm", "18x35 cm", "20x40 cm", "24x45 cm", "28x50 cm", "32x55 cm"],
-    favorite: true,
-    linea: ["bolsas"]
-  },
+  // {
+  //   nombre: "Bolsas de Papel",
+  //   descripcion: "Bolsas ecológicas de papel, ideales para tiendas y supermercados.",
+  //   imagen: "/images/products/bolsas_papel.webp",
+  //   slug: "bolsas-papel",
+  //   medidas: ["8x16 cm", "10x20 cm", "12x22 cm", "14x28 cm", "16x32 cm", "18x35 cm", "20x40 cm", "24x45 cm", "28x50 cm", "32x55 cm"],
+  //   favorite: true,
+  //   linea: ["bolsas"]
+  // },
   
   {
     nombre: "Bolsa Celofán",
@@ -74,26 +74,26 @@ export const products = [
     favorite: true,
     linea: ["seguridad"]
   },
-  {
-    nombre: "Cinta termoaislante",
-    descripcion: "Cinta térmica para control de temperatura en almacenes y oficinas.",
-    imagen: "/images/products/cinta_termo.webp",
-    slug: "cinta-termoaislante",
-    medidas: ["2x2 m"],
-    price: "$ 25.000",
-    favorite: false,
-    linea: ["cintas"]
-  },
-  {
-    nombre: "Gorro desechable",
-    descripcion: "Gorro protector desechable para uso en industrias y hospitales.",
-    imagen: "/images/products/gorro.webp",
-    slug: "gorro-desechable",
-    medidas: ["Talla única"],
-    price: "$ 25.000",
-    favorite: true,
-    linea: ["seguridad"]
-  },
+  // {
+  //   nombre: "Cinta termoaislante",
+  //   descripcion: "Cinta térmica para control de temperatura en almacenes y oficinas.",
+  //   imagen: "/images/products/cinta_termo.webp",
+  //   slug: "cinta-termoaislante",
+  //   medidas: ["2x2 m"],
+  //   price: "$ 25.000",
+  //   favorite: false,
+  //   linea: ["cintas"]
+  // },
+  // {
+  //   nombre: "Gorro desechable",
+  //   descripcion: "Gorro protector desechable para uso en industrias y hospitales.",
+  //   imagen: "/images/products/gorro.webp",
+  //   slug: "gorro-desechable",
+  //   medidas: ["Talla única"],
+  //   price: "$ 25.000",
+  //   favorite: true,
+  //   linea: ["seguridad"]
+  // },
   {
     nombre: "Guantes de nitrilo",
     descripcion: "Guantes resistentes y libres de látex para uso médico e industrial.",
