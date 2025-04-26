@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title='404 not found | Imperio del Plastico'
+  description='Ups, parece que esta página no existe. En Imperio del Plástico te ayudamos a encontrar lo que buscas. Regresa al inicio o explora nuestro catálogo de productos. ¡Estamos aquí para ayudarte!'
+  >
+  <main class="flex flex-col justify-end items-center h-[600px] pb-28 pt-40 px-40 back-products">
+    <div>
+      <h2 class="text-5xl">Tenemos un problema</h2>
+      <p class="text-red-700 text-xl my-5">Pero ese producto o ruta no lo encontramos, puede que aun este en fabricación</p>
+      <p class="text-2xl">
+        <a href="/" class="bg-red-200 hover:bg-red-700 hover:text-white transition-all duration-200 rounded-xl px-2">
+          Ve a la página principal
+        </a> o <a href="/productos" class="bg-red-200 hover:bg-red-700 hover:text-white transition-all duration-200 rounded-xl px-2"
+        >Conoce todos nuestros productos</a>
+      </p>
+      <div class="flex flex-row justify-center items-center mt-10 gap-5">
+        <p class="text-7xl">404</p>
+        <p class="text-3xl">Página no encontrada</p>
+      </div>
+    </div>
+  </main>
+</Layout>
