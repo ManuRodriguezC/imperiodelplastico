@@ -59,7 +59,8 @@ import type React from "react";
        <button
          type="submit"
          disabled={loading}
-         className="bg-imperio rounded-md text-white cursor-pointer mt-4 p-2">
+         className={`rounded-md text-white mt-4 p-2 
+          ${loading ? 'bg-gray-400 cursor-not-allowed' : 'bg-imperio cursor-pointer'}`}>
          {
            loading ? "Enviando" : "Enviar"
          }
